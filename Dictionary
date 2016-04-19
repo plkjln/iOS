@@ -1,7 +1,7 @@
-//Dictionary: phone book (name:Number)
-import Foundation
-
 //Simple example to take a dictornary and print the key & value of the keys that are in the dictionary, else print "not found"
+//Dictionary: phone book (name:Number)
+
+import Foundation
 
 var phoneBook: [String:Int] = ["sam": 99912222,
                                "tom": 11122222,
