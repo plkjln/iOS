@@ -1,9 +1,9 @@
 //String, S, of length N that is indexed from 0 to N−1,
 //print its even-indexed and odd-indexed characters as 2 space-separated strings on a single line.
-//Note: 0 is considered to be an even index, there are multiple words separated by new line in the string
+//Note: 0 is considered to be an even index
 
 //Approach (A)
-//The below funtion reads multiple lines from console and throws them as a String
+//Desc: The String S has multiple words separated by new line
 public func getLine() -> String {
     var buf = String()
     var c = getchar()
@@ -40,12 +40,17 @@ for i in 0..<n {
 }
 print("\(numO)")
 
-
+// INPUT
+//-> SWIFT
+//-> is
+//-> awesome
+//OUTPUT
+//-> SIT WF
+//-> i s
+//-> aeoe wsm
 
 //Approach (B)
-// Read mutliple words separated by SPACE in an array & print as above problem:
-// Note: The multiple words are separated by space in the string and the number of words are inputted by the user in the console
-
+//Desc: The String S has multiple words separated by space.
  var n = Int(readLine()!)!
  var arr = readLine()!.characters.split(" ").map{String($0)}
  for var i in 0..<n {
@@ -64,10 +69,10 @@ print("\(numO)")
  }
  print("\(odd) \(even)")
  }
-
 // INPUT
-//-> SWIFT
-//-> Best
+//-> SWIFT is awesome
 //OUTPUT
 //-> SIT WF
-//-> Bs et
+//-> i s
+//-> aeoe wsm
+
