@@ -22,3 +22,16 @@ print(arr.indexOf(num)!)
 } else {
 print("Arr \(arr) does not contain element \(num)")
 }
+
+/* INPUT
+Enter number to be searched: 11
+Enter the 6 numbers for array: 1 4 5 6 7 3
+OUTPUT
+Arr [1, 4, 5, 6, 7, 3] does not contain element 11
+Program ended with exit code: 0 
+INPUT
+Enter number to be searched: 4
+Enter the 6 numbers for array: 1 4 5 6 7 3
+OUTPUT
+1
+*/
