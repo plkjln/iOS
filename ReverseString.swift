@@ -6,3 +6,9 @@ for letter in string {
     inReverse = "\(letter)" + " " + inReverse
 }
 print(inReverse)
+
+/* INPUT
+-> Swift
+OUTPUT
+-> tfiwS
+*/
