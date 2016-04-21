@@ -1,5 +1,6 @@
 /*A simple creation of Class "Person" with property "age" and method "amiold" to determine whether the person is young, 
 teenager or old by the current age and their age after 3 years. The current age id inputted from the console.*/
+
 //Class VS Instance
 
 class Person {
