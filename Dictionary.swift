@@ -22,24 +22,35 @@ for (myKey,myValue) in phoneBook {
 //Note: All the dictionary values are inputted together in the console. 
 //Each record of dictionary is separated by space, first is Name and after the space is Phone#. Different records are on different lines. 
 
-var Phonebook = [String:String]()
-var length = IntMax(readLine()!)!
+let n = Int(readLine()!)!
+var phoneBook: [String: Int] = Dictionary()
 
-for x in 1...length {
-    var namesplit = readLine()!.characters.split(" ")
+for i in 0 ..< n {
+    let namesplit = readLine()!.characters.split(" ")
     var name = String(namesplit.first!)
-    var phone = String(namesplit.last!)
-    Phonebook[name] = phone
+    var phone = Int(String(namesplit.last!))!
+    phoneBook[name] = phone
 }
-for x in 1...length {
-    var searchName = readLine()!
-    if Phonebook[searchName] != nil && searchName !=  "" {
-        if var contains = Phonebook[searchName] {
-            print("\(searchName)=\(contains)")
-        } else {
-            print("Not found")
-        }
+var search: String? = readLine()
+while search != nil {
+    if let val = phoneBook[search!] {
+        print("\(search!)=\(val)")
     } else {
         print("Not found")
     }
- }
+    search = readLine()
+}
+
+/* INPUT
+->3
+->sam 99912222
+->tom 11122222
+->harry 12299933
+->sam
+->edward
+->harry
+OUTPUT
+->sam=99912222
+->Not found
+->harry=122999333
+*/
