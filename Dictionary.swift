@@ -18,20 +18,28 @@ for (myKey,myValue) in phoneBook {
     }
 }
 
-//Approach B:  Dictionary values are inputedt from the console along with the names to be serached.
+//Approach B:  Dictionary values are inputted from the console along with the names to be serached.
+//Note: All the dictionary values are inputted together in the console. 
+//Each record of dictionary is separated by space, first is Name and after the space is Phone#. Different records are on different lines. 
+
 var Phonebook = [String:String]()
 var length = IntMax(readLine()!)!
+
 for x in 1...length {
     var namesplit = readLine()!.characters.split(" ")
-    Phonebook[String(namesplit.first!)] = String(namesplit.last!)
+    var name = String(namesplit.first!)
+    var phone = String(namesplit.last!)
+    Phonebook[name] = phone
 }
 for x in 1...length {
-    var name = readLine()!
-    if name !=  "" {
-        if var contains = Phonebook[name] {
-            print("\(name)=\(contains)")
+    var searchName = readLine()!
+    if Phonebook[searchName] != nil && searchName !=  "" {
+        if var contains = Phonebook[searchName] {
+            print("\(searchName)=\(contains)")
         } else {
             print("Not found")
         }
+    } else {
+        print("Not found")
     }
-}
+ }
