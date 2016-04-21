@@ -1,7 +1,6 @@
 //
-//  main.swift
+//  ArrayElementSearch.swift
 //  ArrayElementSearch
-//
 //  Copyright © 2016 Plk Jln. All rights reserved.
 //
 
