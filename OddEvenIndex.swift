@@ -4,50 +4,31 @@
 
 //Approach (A)
 //Desc: The String S has multiple words separated by new line
-public func getLine() -> String {
-    var buf = String()
-    var c = getchar()
-    // 10 is ascii code for newline
-    // TODO: add |- && count(buf) < Int.max -| when 1.2 is supported
-    while c != EOF && c != 10 {
-        buf.append(UnicodeScalar(UInt32(c)))
-        c = getchar()
-    }
-    return buf
-}
-var n = 2, i = 0
-var odd = "", even = "", numO = "", numE = ""
+var n = Int(readLine()!)!
 
-for i in 0..<n {
-    var arr = getLine()
-    var str:String = String(arr)
-    var j = 0
-    //print("str:\(str), ARR: \(arr), str.characters.count: \(str.characters.count)")
+while n-- > 0 {
+    var odd = "", even = "", res = "", j = 0
+    var chars = readLine()!.characters.map { String($0) }
     
-    while  j < str.characters.count {
+    while  j < chars.count {
         if (j % 2 == 0) {
-            var charo = String(str[str.startIndex.advancedBy(j)])
-            odd += charo
+            even += chars[j]
         } else {
-            var chare = String(str[str.startIndex.advancedBy(j)])
-            even += chare
+            odd += chars[j]
         }
         j = j+1
     }
-    numO += odd + " " + even + "\r\n"
-    odd = ""
-    even = ""
+    res += even + " " + odd //+ "\r\n"
+    print(res)
 }
-print("\(numO)")
 
-// INPUT
-//-> SWIFT
-//-> is
-//-> awesome
-//OUTPUT
-//-> SIT WF
-//-> i s
-//-> aeoe wsm
+//INPUT-> 3 // total string to be inputted (n)
+//INPUT-> SWIFT
+//OUTPUT-> SIT WF
+//INPUT-> is
+//OUTPUT-> i s
+//INPUT-> awesome
+//OUTPUT-> aeoe wsm
 
 //Approach (B)
 //Desc: The String S has multiple words separated by space.
